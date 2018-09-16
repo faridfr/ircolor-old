@@ -34,6 +34,52 @@
             </div>
           </div>
 
+          <div class="modal fade" id="api" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="usercp-title"> راهنمای api</h4>
+                  </div>
+                  <div class="modal-body" id="usercp-body">
+
+
+                          <div class="row">
+
+                      <div class="col-sm-12">
+                        برای استفاده از api کافی است به آدرس زیر درخواست GET ارسال کنید : <br>
+                        <pre style="text-align:left;">http://ircolor.ir/api?hex=HEXCODE</pre>
+                        در صورتی که درخواست شما موفقیت آمیز باشد ، مقدار <code>status</code> را <code>success</code> دریافت میکنید در غیر این صورت <code>failure</code> دریافت کرده که دلیل آن را می توانید در متغیر <code>message</code> بیابید .
+                        <hr>
+                        با استفاده از این api به موارد زیر دسترسی خواهید داشت :<br><br>
+                        <ul>
+                          <li><code>color</code> , کد رنگی که شما فرستاده اید</li>
+                          <li><code>color_status</code>روشنی یا تیرگی رنگ</li>
+                          <li><code>text_color</code>رنگ مناسب متن</li>
+                          <li><code>hex</code>کد hex</li>
+                          <li><code>rgb</code>کد rgb بصورت آرایه</li>
+                          <li><code>hsl</code>کد hsl بصورت آرایه</li>
+                          <li><code>darker</code>ده رنگ تیره تر به ترتیب</li>
+                          <li><code>brighter</code>ده رنگ روشن تر به ترتیب</li>
+                        </ul>
+
+                        <hr>
+                        برای دیدن یک نمونه روی این لینک کلیک کنید : 
+                        <a href="http://ircolor.ir/api?hex=9872ea" target="_blank">http://ircolor.ir/api?hex=9872ea</a>
+                      </div>
+
+                          </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button data-dismiss="modal" class="btn btn-default" type="button">بستن</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 
 <div style="display:none;">
   <h1>وبسایت تخصصی کد رنگ</h1>

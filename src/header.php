@@ -59,7 +59,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index" >سایت فارسی تخصصی کد رنگ ircolor.ir</a>
+				<a class="navbar-brand" href="index"> <label class="btn btn-default">ircolor.ir</label> سایت فارسی تخصصی کد رنگ</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -75,6 +75,7 @@
 							<input type="color" name="hex" class="form-control" value="#<?=$input?>">
 						</div>
 					<button type="submit" class="btn btn-default"  style="font-weight:300;">جستجو</button>
+					<button data-toggle='modal' href='#api' class="btn btn-default"  style="font-weight:300;">api</button>
 					<button data-toggle='modal' href='#admin' class="btn btn-default"  style="font-weight:300;">سازنده</button>
 
 

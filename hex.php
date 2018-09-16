@@ -53,7 +53,7 @@ include("src/header.php");
      <div class="row" style='font-size:20px; font-weight:200;'>
 	<div class="col-sm-6">
 		<div class="uptil">
-			<span style='background:#<?=$input?>;'><p>#<?=$input?></p></span>
+			<span style='background:#<?=$input?>; width:100%!important;'><p>#<?=$input?></p></span>
 			
 		</div>	
 	</div>
