@@ -154,11 +154,11 @@ include("src/header.php");
 			</div>
 
 			<div class="row">
-				<div class="col-sm-12" style="padding-left:25px;">
+				<div class="col-sm-12" style="padding-left:27px;">
 					<?php 
 					$color = new Color($input); 
 					$complementary = $color->complementary();
-					echo "<a href='?hex=$complementary' class='tooltips'  title='#$complementary' data-placement='bottom' data-toggle='tooltip '><span style='border-radius:10px;width:100%;background:#$complementary'></span></a>";
+					echo "<a href='?hex=$complementary' class='tooltips'  title='#$complementary' data-placement='bottom' data-toggle='tooltip '><span style='border-radius:5px;width:100%;background:#$complementary'></span></a>";
 					?>
 				</div>
 			</div>
@@ -197,51 +197,51 @@ include("src/header.php");
 
 	<div class="row" style="font-size:20px; font-weight:200; margin-top:35px;">
 		<p style="font-size:12px;"> <i class="fa fa-info-circle animated tada infinite"></i>  برای رنگ پس زمینه از کلاس <b>bgcolor</b> و برای رنگ متن از کلاس <b>forecolor</b> و برای رنگ قاب دور المان ها از کلاس <b>bordercolor</b> استفاده کنید</p>
-		<pre style="text-align:left; direction:ltr;">
-			<?php $str = "<style> 
-			.bgcolor { background-color:#$input; } 
-			.forecolor { color:#$input; } 
-			.bordercolor { border:3px solid #$input; }
-		</style>";
-		echo htmlentities($str); ?>
-	</pre>
+<pre style="text-align:left; direction:ltr;">
+<?php $str = "<style> 
+.bgcolor { background-color:#$input; } 
+.forecolor { color:#$input; } 
+.bordercolor { border:3px solid #$input; }
+</style>";
+echo htmlentities($str); ?>
+</pre>
 </div>
 
 
 <div class="row" style="font-size:20px; font-weight:200; margin-top:15px;">
 	<p style="font-size:12px;"> <i class="fa fa-info-circle animated tada infinite"></i>  برای نوشتن یک متن با این رنگ می توانید از کد زیر استفاده کنید </p>
-	<pre style="text-align:left; direction:ltr;">
-		<?php $str = "<p style='color:#$input'>متن دلخواه شما</p>";
-		echo htmlentities($str); ?>
-	</pre>
+<pre style="text-align:left; direction:ltr;">
+<?php $str = "<p style='color:#$input'>متن دلخواه شما</p>";
+echo htmlentities($str); ?>
+</pre>
 </div>
 
 
 <div class="row" style="font-size:20px; font-weight:200; margin-top:15px;">
 	<p style="font-size:12px;"> <i class="fa fa-info-circle animated tada infinite"></i>  کد یک متن سایه دار با این رنگ </p>
-	<pre style="text-align:left; direction:ltr;">
-		<?php $str = "<p style='text-shadow: 4px 4px 2px rgba($rgb[0],$rgb[1],$rgb[2], 0.8);'>متن دلخواه سایه دار</p>";
-		echo htmlentities($str); ?>
-	</pre>
+<pre style="text-align:left; direction:ltr;">
+<?php $str = "<p style='text-shadow: 4px 4px 2px rgba($rgb[0],$rgb[1],$rgb[2], 0.8);'>متن دلخواه سایه دار</p>";
+echo htmlentities($str); ?>
+</pre>
 </div>
 
 
 
 <div class="row" style="font-size:20px; font-weight:200; margin-top:15px;">
 	<p style="font-size:12px;"> <i class="fa fa-info-circle animated tada infinite"></i>  ایجاد یک محیط (<b>div</b>) با رنگ پس زمینه </p>
-	<pre style="text-align:left; direction:ltr;">
-		<?php $str = "<div style='background-color:#$input'>محتوای محیط</div>";
-		echo htmlentities($str); ?>
-	</pre>
+<pre style="text-align:left; direction:ltr;">
+<?php $str = "<div style='background-color:#$input'>محتوای محیط</div>";
+echo htmlentities($str); ?>
+</pre>
 </div>
 
 <div class="row" style="font-size:20px; font-weight:200; margin-top:15px;">
 	<p style="font-size:12px;"> <i class="fa fa-info-circle animated tada infinite"></i>  ایجاد یک (<b>gradients</b>) برای css3 با پشتیبانی انواع مرورگرها </p>
-	<pre style="text-align:left; direction:ltr;">
-		<?php 
-		echo $color->getCssGradient();
-		?>
-	</pre>
+<pre style="text-align:left; direction:ltr;">
+<?php 
+echo $color->getCssGradient();
+?>
+</pre>
 </div>
 
 
