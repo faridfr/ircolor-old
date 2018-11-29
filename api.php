@@ -8,9 +8,22 @@ use Mexitek\PHPColors\Color;
 use \Colors\RandomColor;
 
 $response = array();
-if(isset($_GET['hex']) && $_GET['hex']!='')
+if(isset($_GET['version']) && $_GET['version']!='')
+{
+	$response['last_version'] = 1;
+	$response['last_stable_version'] = 1;
+}
+else if(isset($_GET['hex']) && $_GET['hex']!='')
 {
 	$input = clear($_GET['hex']);
+	if(substr($input,0,1) != '#') $input = '#'.$input;
+	if(!preg_match('/^#[a-f0-9]{6}$/i', $input))
+	{
+		$response['status'] = 'failure';
+		$response['message'] = 'Hex code is incorrect';
+		echo json_encode($response, JSON_UNESCAPED_UNICODE);
+		return 0;
+	}
 	$input = explode('#',$input);
 	$input = end($input);
 	if(strlen($input)!=6) {
