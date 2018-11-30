@@ -9,13 +9,13 @@
 
 	<title>وبسایت تخصصی کد رنگ</title>
 	
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link href="assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" />
-    <link href="assets/css/yamm.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link href="assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" />
+	<link href="assets/css/yamm.css" rel="stylesheet">
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/style-responsive.css" rel="stylesheet" />
+	<link href="assets/css/animate.css" rel="stylesheet">
 
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,16 +37,16 @@
 
 <body>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-84101713-1', 'auto');
-  ga('send', 'pageview');
+		ga('create', 'UA-84101713-1', 'auto');
+		ga('send', 'pageview');
 
-</script>
+	</script>
 
 
 	<nav class="navbar navbar-default navbar-fixed-top" style="font-weight:200; padding-right:100px; padding-left:100px;">
@@ -60,23 +60,35 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand hidden-xs" href="index"> <label class="btn btn-default">ircolor.ir</label> سایت فارسی تخصصی کد رنگ</a>
+
+				<div class="form-group hidden-lg hidden-sm" style="width:70px; padding-top:10px;">
+					<a href="https://cafebazaar.ir/app/colors.ir.ircolor" target="_blank"><img src="img/android.png" width="60" alt="دانلود اپ کد رنگ از کافه بازار"></a>
+				</div>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					
 
-					<form class="navbar-form navbar-left" action="hex">
 
-						<div class="form-group" style="width:200px;">
-							<input type="text" name="hex_code" placeholder="جستجو توسط کد hex با #" class="form-control">
-						</div>
+				<form class="navbar-form navbar-left" action="hex">
 
-						<div class="form-group" style="width:200px;">
-							<input type="color" name="hex" class="form-control" value="#<?=$input?>">
-						</div>
+					<div class="form-group" style="width:70px;">
+						<a href="https://cafebazaar.ir/app/colors.ir.ircolor" class="hidden-xs" target="_blank"><img src="img/android.png" width="60" alt="دانلود اپ کد رنگ از کافه بازار"></a>
+					</div>
+
+					<div class="form-group" style="width:100px;">
+					<a data-toggle='modal' href='#api'><img src="img/api.png" width="90" alt="دانلود اپ کد رنگ از کافه بازار"></a>
+					</div>
+
+					<div class="form-group" style="width:150px;">
+						<input type="text" name="hex_code" placeholder="جستجو با کد Hex" class="form-control">
+					</div>
+
+					<div class="form-group" style="width:150px;">
+						<input type="color" name="hex" class="form-control" value="#<?=$input?>">
+					</div>
 					<button type="submit" class="btn btn-default"  style="font-weight:300;">جستجو</button>
-					<button data-toggle='modal' href='#api' class="btn btn-info"  style="font-weight:300;">API</button>
-					<button data-toggle='modal' href='#admin' class="btn btn-info"  style="font-weight:300;">سازنده</button>
+					
+					<button data-toggle='modal' href='#admin' class="btn btn-default"  style="font-weight:300;">سازنده</button>
 
 
 				</form>
