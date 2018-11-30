@@ -6,6 +6,7 @@
 	<meta name="description" content="اولین و برترین وبسایت تخصصی کد رنگ فارسی,کد رنگ برای طراحی وب و طراحی گرافیک"/>
 	<meta name="keywords" content="colorhex,colorcode,کد رنگ,رنگ های مشابه,رنگ های تیره تر یا روشن تر">
 	<meta name="author" content="فرید فروزان">
+	<link rel="shortcut icon" type="image/png" href="img/ircolor.png"/>
 
 	<title>وبسایت تخصصی کد رنگ</title>
 	
@@ -59,9 +60,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand hidden-xs" href="index"> <label class="btn btn-default">ircolor.ir</label> سایت فارسی تخصصی کد رنگ</a>
+				<a class="navbar-brand hidden-xs" href="index" style=" padding:0px; margin:0px; padding-top:10px;"><img src="img/ircolor.png" width="30" alt="سایت تخصصی کد رنگ"></a>
+				<a class="navbar-brand hidden-xs" href="index" style=" padding:0px; margin:0px; padding-top:15px;"><img src="img/logo.png" width="100" alt="سایت تخصصی کد رنگ"></a>
 
-				<div class="form-group hidden-lg hidden-sm" style="width:70px; padding-top:10px;">
+				<div class="form-group hidden-lg hidden-sm" style="width:70px;padding-top:10px;">
 					<a href="https://cafebazaar.ir/app/colors.ir.ircolor" target="_blank"><img src="img/android.png" width="60" alt="دانلود اپ کد رنگ از کافه بازار"></a>
 				</div>
 			</div>
