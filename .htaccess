@@ -1,0 +1,13 @@
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.ircolor\.ir$
+RewriteRule ^/?$ "http\:\/\/ircolor\.ir\/" [R=301,L]
+
+## To internally redirect /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [L]
+
+ErrorDocument 404 "<center><h2 style='margin-top:200px;'>ircolor Security Page</h2></center>"

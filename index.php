@@ -1,97 +1,80 @@
-<?php 
-include("src/Color.php");
-include("src/config.php");
-use Mexitek\PHPColors\Color;
-include 'src/RandomColor.php';
-use \Colors\RandomColor;
-include("src/header.php");
+<?php
+include("config.php");
+Theme::header();
 ?>
-
-
-<style>body {background:white;}</style>
 
 	<div class="container" style="background:white;">
 		<div class="row" style='font-size:20px; font-weight:200;'>
 
 			<div class="row animated fadeIn" style="background-color:#fdf2f2; color:#57100e; padding:15px; padding-bottom:10px; border-radius:5px;">
-				<div class="col-sm-4"><p style="color:#57100e;">برای شروع یک رنگ را انتخاب کنید</p></div>
-				<div class="col-sm-8"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
+				<div class="col-sm-6 col-xs-12"><p style="color:#57100e;">برای شروع یک رنگ را انتخاب کنید</p></div>
+				<div class="col-sm-6 hidden-xs"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
 			</div>
 
 			<div class="mor  animated bounce" style="margin-top:25px;">
-				<?php 
-				foreach (RandomColor::many(54) as $c) echo '<a href="hex?hex=' . substr($c, -6) . '" class="tooltips"  title="#' . substr($c, -6) . '" data-placement="bottom" data-toggle="tooltip"><span style="background:' . $c . ';"></span></a>';
-				?> 
+				<?=Ircolor::RandomColors(54)?>
 			</div>
 			
 			<style>
 			.mor2 {margin-top:100px;}
 			.mor2 span { display:inline-block; width:51px; height:47px; margin:2px; border-radius:10%;  }
-			</style>	
+			</style>
 
 			<div class="row" style="margin-top:25px;">
 
-			<div class="col-sm-6" style="padding-left:0px;">
+			<div class="col-sm-3" style="padding-left:0px;">
 			
 			<div class="row animated fadeIn" style="background-color:#fdf2f2; color:#57100e; padding:15px; padding-bottom:10px; border-radius:5px;">
-				<div class="col-sm-4 "><p style="color:#57100e;">طیف قرمز</p></div>
-				<div class="col-sm-8"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
+				<div class="col-sm-6 "><p style="color:#57100e;">طیف قرمز</p></div>
+				<div class="col-sm-6 hidden-xs"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
 			</div>
 
 			<div class="mor2" style="margin-top:15px;">
-			  <?php
-			  foreach (RandomColor::many(27, array('hue'=>'red')) as $c) echo '<a href="hex?hex=' . substr($c, -6) . '"  class="tooltips"  title="#' . substr($c, -6) . '" data-placement="bottom" data-toggle="tooltip"><span style="background:' . $c . ';"></span></a>';
-			  ?>
+			  <?=Ircolor::RandomColorsInHue(12,'red')?>
 			</div>
   				
   			</div>
 
-  			<div class="col-sm-6">
+  			<div class="col-sm-3">
 			
 			<div class="row animated fadeIn" style="background-color:#fdf2f2; color:#57100e; padding:15px; padding-bottom:10px; border-radius:5px;">
-				<div class="col-sm-4"><p style="color:#57100e;">طیف سبز</p></div>
-				<div class="col-sm-8"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
+				<div class="col-sm-6 col-xs-12"><p style="color:#57100e;">طیف سبز</p></div>
+				<div class="col-sm-6 hidden-xs"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
 			</div>
 
 			<div class="mor2" style="margin-top:15px;">
-			  <?php
-			  foreach (RandomColor::many(27, array('hue'=>'green')) as $c) echo '<a href="hex?hex=' . substr($c, -6) . '"  class="tooltips"  title="#' . substr($c, -6) . '" data-placement="bottom" data-toggle="tooltip"><span style="background:' . $c . ';"></span></a>';
-			  ?>
+              <?=Ircolor::RandomColorsInHue(12,'green')?>
 			</div>
 
 			</div>
 
-			<div class="col-sm-6" style="padding-left:0px;">
+			<div class="col-sm-3" style="padding-left:0px;">
 			
 
 			<div class="row animated fadeIn"  style="background-color:#fdf2f2; color:#57100e; padding:15px; padding-bottom:10px; border-radius:5px;">
-				<div class="col-sm-4"><p style="color:#57100e;">طیف آبی</p></div>
-				<div class="col-sm-8"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
+				<div class="col-sm-6 col-xs-12"><p style="color:#57100e;">طیف آبی</p></div>
+				<div class="col-sm-6 hidden-xs"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
 			</div>
 
 
 			<div class="mor2" style="margin-top:15px;">
-			  <?php
-			  foreach (RandomColor::many(27, array('hue'=>'blue')) as $c) echo '<a href="hex?hex=' . substr($c, -6) . '"  class="tooltips"  title="#' . substr($c, -6) . '" data-placement="bottom" data-toggle="tooltip"><span style="background:' . $c . ';"></span></a>';
-			  ?>
-			</div>
+              <?=Ircolor::RandomColorsInHue(12,'blue')?>
+            </div>
 			
 			</div>
 
-			<div class="col-sm-6">
+			<div class="col-sm-3">
 			
 
 
 			<div class="row animated fadeIn" style="background-color:#fdf2f2; color:#57100e; padding:15px; padding-bottom:10px; border-radius:5px;">
-				<div class="col-sm-4"><p style="color:#57100e;">طیف زرد</p></div>
-				<div class="col-sm-8"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
+				<div class="col-sm-6 col-xs-12"><p style="color:#57100e;">طیف زرد</p></div>
+				<div class="col-sm-6 hidden-xs"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.3; "></div>
 			</div>
 
 
 			<div class="mor2" style="margin-top:15px;">
-			  <?php
-			  foreach (RandomColor::many(27, array('hue'=>'yellow')) as $c) echo '<a href="hex?hex=' . substr($c, -6) . '"  class="tooltips"  title="#' . substr($c, -6) . '" data-placement="bottom" data-toggle="tooltip"><span style="background:' . $c . ';"></span></a>';
-			  ?>
+              <?=Ircolor::RandomColorsInHue(12,'yellow')?>
 			</div>
 			
 			</div>
@@ -2182,6 +2165,6 @@ include("src/header.php");
 
 
 
-	<?php include("src/footer.php");?>
-</body>
-</html>
+<?php
+Theme::footer();
+?>

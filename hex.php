@@ -1,10 +1,6 @@
-<?php 
+<?php
 
-include("src/Color.php");
-include("src/config.php");
-
-use Mexitek\PHPColors\Color;
-
+include("config.php");
 if(isset($_GET['hex']) && $_GET['hex']!='')
 {
 
@@ -40,7 +36,7 @@ if($color->isLight( $input ))
 else if($color->isDark( $input ))
 	$dl = 'dark';
 
-if($dl=='light') 
+if($dl=='light')
 {
 	$txtcol = 'black';
 	$txtback = $input;
@@ -53,17 +49,21 @@ else if($dl=='dark')
 	$txt = "تیره";
 }
 
-include("src/header.php");
-
+Theme::header();
 ?>
-<style>body {background:#<?=$input?>;}</style>
+<style>
+	body{
+		background-color: #<?=$input?>;
+		background-image: url('assets/img/back.png');
+	}
+</style>
 
 <div class="container" style="background:white;">
 
 	<div class="row" style='font-size:20px; font-weight:200;'>
 		<div class="col-sm-6">
 			<div class="uptil">
-				<span style='background:#<?=$input?>; width:100%!important;'><p>#<?=$input?></p></span>
+				<span style='background:#<?=$input?>; width:100%!important;'><p style="font-size:30px; font-weight:500; direction:ltr;">#<?=$input?></p></span>
 
 			</div>	
 		</div>
@@ -153,15 +153,22 @@ include("src/header.php");
 				<div class="col-sm-10"><hr  style="margin-left:10px; margin-top:15px; border-top: 0.1px dashed grey; opacity:0.6; "></div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12" style="padding-left:27px;">
 					<?php 
 					$color = new Color($input); 
 					$complementary = $color->complementary();
-					echo "<a href='?hex=$complementary' class='tooltips'  title='#$complementary' data-placement='bottom' data-toggle='tooltip '><span style='border-radius:5px;width:100%;background:#$complementary'></span></a>";
+					$color = new Color($complementary); 
+					$complement = '';
+					for($i=0;$i<18;$i++)
+					{
+						$newcolor = $color->lighten('2');
+						$color = new Color($newcolor);
+						$back  = $color->gethex();
+						$complement .= "<a href='?hex=$back' class='tooltips'  title='#$back' data-placement='bottom' data-toggle='tooltip '><span style='background:#$back'></span></a>";
+					}
+					echo $complement;
+					$color = new Color($input);
+
 					?>
-				</div>
-			</div>
 		</div>
 
 	</div>
@@ -246,6 +253,4 @@ echo $color->getCssGradient();
 
 
 </div>
-<?php include("src/footer.php");?>
-</body>
-</html>
+<?php Theme::footer(); ?>
