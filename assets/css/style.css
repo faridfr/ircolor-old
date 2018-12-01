@@ -4,6 +4,14 @@
  */
 
 
+    src: url('../fonts/Yekan-modified.eot');
+    src: url('../fonts/Yekan-modified.eot#iefix') format('embedded-opentype'),
+         url('../fonts/Yekan-modified.woff') format('woff'),
+         url('../fonts/Yekan-modified.ttf') format('truetype'),
+         url('../fonts/Yekan-modified.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
 	font-family: 'yekan';
@@ -425,7 +433,7 @@ input[type=range]:focus::-ms-fill-upper {
 /*lock screen*/
 
 .lock-screen {
-    background:#02bac6;
+    background:#02bac6 url("../img/lock-bg.jpg");
     background-size: cover;
     background-repeat: repeat;
 }
@@ -486,7 +494,7 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: 10px;
     display: inline-block;
     text-align: center;
-    font-weight: 100;
+    font-weight: 10;
 }
 
 
@@ -587,7 +595,7 @@ input[type=range]:focus::-ms-fill-upper {
     -o-transition: all .3s ease;
     transition: all .3s ease;
     box-shadow: none;
-    /*background: #01a6b2 url("../img/chat-search.png") no-repeat 12px 9px;*/
+    background: #01a6b2 url("../img/chat-search.png") no-repeat 12px 9px;
     padding:0 5px 0 35px;
     margin-top: 2px;
     border: none;
@@ -599,7 +607,7 @@ input[type=range]:focus::-ms-fill-upper {
     box-shadow: none;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
-    /*-ms-transition: all .3s ease;*/
+    -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
     /*background: #01a6b2;*/
@@ -3224,7 +3232,7 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-404{
-    /*background: url("../img/404_icon.png") no-repeat;*/
+    background: url("../img/404_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -3270,7 +3278,7 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-500{
-    /*background: url("../img/500_icon.png") no-repeat;*/
+    background: url("../img/500_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -4303,8 +4311,8 @@ table.sliders tr td {
 .switch-square {
     border-radius: 6px;
     -webkit-border-radius: 6px;
-    /*-webkit-mask: url('../img/mask.png') 0 0 no-repeat;*/
-    /*mask: url('../img/mask.png') 0 0 no-repeat;*/
+    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
+    mask: url('../img/mask.png') 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;

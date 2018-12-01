@@ -1,6 +1,7 @@
 <?php
 
 include("config.php");
+$ok=1;
 if(isset($_GET['hex']) && $_GET['hex']!='')
 {
 
@@ -63,7 +64,7 @@ Theme::header();
 	<div class="row" style='font-size:20px; font-weight:200;'>
 		<div class="col-sm-6">
 			<div class="uptil">
-				<span style='background:#<?=$input?>; width:100%!important;'><p style="font-size:30px; font-weight:500; direction:ltr;">#<?=$input?></p></span>
+				<span style='background:#<?=$input?>; width:100%!important;'><p style="font-size:30px; font-weight:500; direction:ltr; color:<?=$txtcol?>">#<?=$input?></p></span>
 
 			</div>	
 		</div>
