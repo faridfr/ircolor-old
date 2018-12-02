@@ -1,11 +1,6 @@
 <?php 
 
-include("src/Color.php");
-include 'src/RandomColor.php';
-include("src/config.php");
-
-use Mexitek\PHPColors\Color;
-use \Colors\RandomColor;
+include("config.php");
 
 $response = array();
 if(isset($_GET['version']) && $_GET['version']!='')
